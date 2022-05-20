@@ -1,6 +1,4 @@
 import React from "react";
-import { Row,Col } from "react-bootstrap";
-import AnimeCard from "./AnimeCard";
 import { useState,useEffect } from "react";
 
 
@@ -14,7 +12,7 @@ const Home = () => {
         const url = 'https://api.jikan.moe/v3';
         // const url = 'https://api.jikan.moe/v4/';
         e.preventDefault();
-
+        console.log(url)
         FetchAnime(search);
     };
 
