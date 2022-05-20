@@ -221,6 +221,13 @@ img:hover{
 
 @media (min-width: 320px) and (max-width: 480px) {
 
+  .anime-list{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 32px; */
+    margin: 32px 0px 0px 10px;
+  }
+
   .layout{
     display: flex;
     flex-direction: column;
