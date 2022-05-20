@@ -20,8 +20,7 @@ const Home = () => {
 
     const GetTopAnime = async () => {
         const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
-        .then(res => res.json());
-
+        .then(res => res.json());    
     setTopAnime(temp.top.slice(0, 5));
     }
 
@@ -86,6 +85,7 @@ const Home = () => {
                         rel="noreferrer"
                         >
                             {anime.title}
+                            {anime.votes}
                         </a>
                     ))}
                     
