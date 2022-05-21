@@ -1,49 +1,25 @@
 import React from "react";
 import { useState,useEffect } from "react";
-
+import useFetch from "./useFetch";
+import { Link } from "react-router-dom";
+import AnimePage from "./AnimePage";
 
 const Home = () => {
     
-    const [animeList, setanimeList] = useState([])
-    const [topAnime, setTopAnime] = useState([])
-    const [search, setSearch] = useState("");
-
-    const searchAnime = async (e) => {
-        const url = 'https://api.jikan.moe/v3';
-        // const url = 'https://api.jikan.moe/v4/';
-        e.preventDefault();
-        console.log(url)
-        FetchAnime(search);
-    };
-
-    const GetTopAnime = async () => {
-        const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
-        .then(res => res.json());    
-    setTopAnime(temp.top.slice(0, 5));
-    }
-
-    useEffect(() => {
-        GetTopAnime();
-
-        console.log(topAnime)
-    }, [])
-
-    const FetchAnime = async (query) => {
-        const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`)
-        .then(res => res.json());
+    // const [votes, setVotes] = useState("");
+    const {animeList, topAnime, search, searchAnime, setSearch, handleId} = useFetch()
+  
     
-        setanimeList(temp.results);
-    }
 
     const AnimeCard = ({anime}) => {
         return (  
-            <article className="anime-card">
-                <a href="">
+            <article className="anime-card" >
+                <Link to={`/animepage/${anime.mal_id}`} >
                     <figure>
-                        <img src={anime.image_url} alt="AnimeImage" />
+                        <img src={anime.image_url} className="card-img" alt="AnimeImage" />
                     </figure>
                     <h3>{anime.title}</h3>
-                </a>
+                </Link>
             </article>
         );
     }
@@ -64,10 +40,13 @@ const Home = () => {
                 </div>
                 <div className="anime-list">
                     {animeList.map(anime => (
+                        
                         <AnimeCard
                             anime={anime}
                             key={anime.mal_id}
+                            
                         />
+                        
                     ))}
                 </div>
             </div>
@@ -76,16 +55,17 @@ const Home = () => {
                     <h2>Top Anime</h2>
                     {topAnime.map(anime => (
 
-                        <a 
+                        <Link
                         className="top-anime"
-                        href="#"
+                        to="/animepage"
                         target="_blank"
                         rel="noreferrer"
                         >
                             {anime.title}
-                            {anime.votes}
-                        </a>
+                            
+                        </Link>
                     ))}
+
                     
                 </nav>
             </aside>

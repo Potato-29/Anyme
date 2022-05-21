@@ -36,6 +36,7 @@ p{
 } */
 
 body{
+  color: #ffffff;
   font-family: 'Montserrat';
   margin: 0;
   background: url('./assets/images/gradient5.png');
@@ -122,10 +123,6 @@ input {
   opacity: 0.7;
 }
 
-.anime-card{
-
-}
-
 aside{
   margin-top: 20px;
   margin-right: 20px;
@@ -158,7 +155,7 @@ figure{
 					margin-bottom: 16px;
 }
 
-img{
+.card-img{
   display: block;
   width: 100%;
   height: 350px;
@@ -180,7 +177,7 @@ a{
   text-decoration: none;
 }
 
-img:hover{
+.card-img:hover{
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
 							transform: scale(1.05);
 }
@@ -214,6 +211,144 @@ img:hover{
  .top-anime:active{
   position:relative;
 	top:1px;
+}
+
+/* //////////////////////////////////////////////////////SINGLE PAGE STYLES////////////////////////////////////////////////////////////// */
+
+
+
+.main{
+  padding: 40px;
+  /* padding-top: 20px; */
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+.desc-section{
+  flex: 3.5;
+}
+
+.desc{
+  font-size: 1em;
+}
+
+.anime-name{
+  color: white;
+  padding-left: 20px;
+  
+}
+
+.back-btn{
+  font-family: 'Montserrat';
+  color: white;
+  padding: 10px;
+  margin-left: 30px;
+  background-color: #313131;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.other-info{
+  padding-top: 10px;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+span{
+  font-size: 18px;
+}
+
+.base-wrapper{
+  flex: 1;
+  height: auto;
+}
+
+.anime-img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.img-wrapper{
+  padding: 100px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.extra-img{
+  transition: all;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.ep-wrapper{
+  /* display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  padding: 20px;
+  width: 80%;
+  justify-content: center; */
+  
+}
+
+.colapse-btn{
+  margin-top: 40px;
+  text-align: center;
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  border-radius: 50px;
+  width: 100%;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  
+}
+
+.Collapsible__trigger{
+  margin-top: 40px;
+  text-align: center;
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  border-radius: 50px;
+  width: 100%;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  
+}
+
+.eps{
+  color: white;
+  font-size: 1em;
+}
+
+.loading{
+  font-size: 3em;
+  text-align: center;
+}
+
+.extra-img:hover{
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+							transform: scale(1.3);
+              transition: 0.5s;
 }
 
 /* //////////////////////////////////////////////////////BREAKPOINTS////////////////////////////////////////////////////////////////////// */
@@ -380,7 +515,7 @@ img:hover{
             margin-bottom: 16px;
   }
 
-  img{
+  .card-img{
     display: block;
     width: 100%;
     height: 350px;
@@ -401,7 +536,7 @@ img:hover{
     text-decoration: none;
   }
 
-  img:hover{
+  .card-img:hover{
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
                 transform: scale(1.05);
   }
@@ -409,7 +544,7 @@ img:hover{
 
 
 @media (min-width:1025px) and (max-width:1200px) {
-  img{
+  .card-img{
     display: block;
     width: 100%;
     height: 350px;
@@ -466,7 +601,7 @@ img:hover{
   /* figure{
     margin: 30px;
   } */
-  img{
+  .card-img{
     width: 80%;
     height: 350px;
   }
