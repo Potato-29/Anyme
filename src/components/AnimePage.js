@@ -7,10 +7,12 @@ const AnimePage = () => {
 
     const {id} = useParams();
     
+    
     const [isLoading, setIsLoading] = useState(true);
     const [images, setImages] = useState();
     const [data, setData] = useState();
     const [episodes, setEpisodes] = useState();
+    const [epPages, setEpPages] = useState();
     
 
     const getData = async () => {
@@ -37,19 +39,46 @@ const AnimePage = () => {
         setIsLoading(false)
     },[])
 
-    const getEpisodes = async () => {
-        const temp = await fetch(`https://api.jikan.moe/v3/anime/${id}/episodes`)
+    const getEpisodes = async (a) => {
+        const temp = await fetch(`https://api.jikan.moe/v3/anime/${id}/episodes/${a}`)
         .then(res => res.json())
 
-        console.log(temp.episodes)
-    setEpisodes(temp.episodes)
+        // console.log(a)
+        console.log(temp)
+        setEpisodes(temp.episodes)
+        setEpPages(temp.episodes_last_page)
+        // console.log(epPages)
     }
-
-    useEffect(() => {
-        getEpisodes();
+    
+    
+    useEffect((a) => {
+        getEpisodes(a = 1);
+        
         setIsLoading(false)
     },[])
 
+    const handlePageId = (e) => {
+        var pageId = e.target.id;
+        // console.log(pageId)
+        getEpisodes(pageId)
+        
+    }
+    
+    
+    
+
+    
+
+    var btns = []
+
+    for (let i = 1; i <= epPages; i++) {
+       
+       btns.push(<button className="page" id={i} key={i} onClick={handlePageId}>Page {i}</button>) 
+       
+    }
+
+    
+    
     // console.log(animeList)
     return (
           
@@ -59,7 +88,7 @@ const AnimePage = () => {
             <Link to="/"><button className="back-btn">Back to Home</button></Link>
                 <div className="row">
                     <div className="base-wrapper">
-                        <img src={data?.image_url} alt="" className="anime-img" srcset="" />
+                        <img src={data?.image_url} alt="" className="anime-img" />
                         
                     </div>
                     <div className="desc-section">
@@ -81,15 +110,24 @@ const AnimePage = () => {
                 <div className="ep-wrapper">
                     
                     <Collapsible trigger="List of episodes" triggerTagName="button" triggerClassName="colapse-btn">
+                        {btns}
                         {episodes?.map(eps => (
                             <p className="eps">{eps.episode_id}) {eps.title}</p>
                         ))}
                     </Collapsible>
                 </div>
+                <div className="divider">
+                    
+                    <h1 className="some-pics">Some pictures</h1>
+                
+                    
+                </div>
                 <div className="img-wrapper">
+                    
                     {images?.map(pics => (
                         <div className="picture-cards">
                             <figure>
+                                
                                 <img src={pics?.small} alt="" className="extra-img" />
                             </figure>
                             <h1></h1>
