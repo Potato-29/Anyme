@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Collapsible from "react-collapsible";
+import {FaArrowCircleRight} from 'react-icons/fa'
 
 
 const AnimePage = () => {
@@ -13,7 +14,7 @@ const AnimePage = () => {
     const [data, setData] = useState();
     const [episodes, setEpisodes] = useState();
     const [epPages, setEpPages] = useState();
-    
+    const [reviews, setReviews] = useState();
 
     const getData = async () => {
         const temp = await fetch(`https://api.jikan.moe/v3/anime/${id}`)
@@ -36,7 +37,7 @@ const AnimePage = () => {
 
     useEffect(() => {
         getImages();
-        setIsLoading(false)
+        // setIsLoading(false)
     },[])
 
     const getEpisodes = async (a) => {
@@ -44,17 +45,25 @@ const AnimePage = () => {
         .then(res => res.json())
 
         // console.log(a)
-        console.log(temp)
+        // console.log(temp)
         setEpisodes(temp.episodes)
         setEpPages(temp.episodes_last_page)
         // console.log(epPages)
+    }
+
+    const getReviews = async() => {
+        const temp = await fetch(`https://api.jikan.moe/v3/anime/${id}/reviews`)
+        .then(res => res.json())
+        
+        setReviews(temp.reviews.slice(0,5))
+        console.log(temp.reviews)
     }
     
     
     useEffect((a) => {
         getEpisodes(a = 1);
         
-        setIsLoading(false)
+        // setIsLoading(false)
     },[])
 
     const handlePageId = (e) => {
@@ -64,7 +73,12 @@ const AnimePage = () => {
         
     }
     
-    
+    const handleClick = () => {
+        var reviewButton = document.getElementById('get-reviews')
+        var iconRotate = document.getElementById('icon')
+
+        reviewButton.onclick(getReviews(), iconRotate.style.transform = "rotate(90deg")
+    }
     
 
     
@@ -133,6 +147,23 @@ const AnimePage = () => {
                             <h1></h1>
                         </div>
                     ))}
+                </div>
+                <div className="reviews">
+                    {/* <h1>Review</h1> */}
+                    <button className="get-reviews" id="get-reviews" onClick={handleClick}>Get Reviews </button><FaArrowCircleRight id="icon" className="icon"/>
+                    {reviews?.map(revs => (
+                        <div className="rev-container">
+                            <div className="user-info">
+                                <img src={revs.reviewer.image_url}  className="user-img"/>
+                                <h3 className="username">{revs.reviewer.username} <br /> <span className="score">Overall Rating: {revs.reviewer.scores.overall}</span></h3>
+                            </div>
+                            <p className="single-review">{revs.content}</p>
+                        </div>
+                        
+                    ))}
+                    
+            
+                    
                 </div>
             </div>
         </div>

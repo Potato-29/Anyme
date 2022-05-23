@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar';
 import {Navbar, NavbarBrand} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AnimePage from './components/AnimePage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   
   return (
     <Router>
+      <ScrollToTop>
       <div className="App"> 
         <Header/>
         <div className='content'>
@@ -24,6 +26,7 @@ function App() {
         </Routes>
         </div>
       </div>
+      </ScrollToTop>
     </Router>
   );
 }

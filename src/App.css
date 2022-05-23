@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 header {
   font-family:'Montserrat';
   text-align: center;
@@ -332,6 +334,10 @@ span{
   
 }
 
+.colapse-btn{
+  
+}
+
 
 .Collapsible__trigger{
   margin-top: 40px;
@@ -382,6 +388,63 @@ span{
 .some-pics{
   margin-top: 30px;
   color: white;
+}
+
+.reviews{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px 0px 0px 0px;
+}
+.rev-container{
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  border-radius: 50px;
+  border: 0;
+  padding: 20px;
+  margin-top: 20px;
+}
+.single-review{
+  font-weight: 100;
+  font-size: 0.7em;
+}
+.user-info{
+  display: flex;
+  padding: 20px;
+}
+.username{
+  margin: 0;
+  padding: 10px;
+}
+.score{
+  font-weight: 100;
+  font-size: 0.7em;
+}
+.user-img{
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.get-reviews{
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  border-radius: 50px;
+  border: 0;
+  padding: 20px;
+  font-family: 'Montserrat';
+  font-size: 1.3em;
+  color: white;
+}
+
+.icon{
+  background-color: rgba(64, 224, 208, 0);
+  color: white;
+  margin: 20px;
+  font-size: 2em;
+  transition: all 0.7s;
+  /* transform: rotate(90deg); */
 }
 
 
@@ -464,6 +527,7 @@ span{
     transform: scale(1.9);
     
   } */
+  
 }
 
 
