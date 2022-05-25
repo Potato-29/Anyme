@@ -18,6 +18,17 @@ header {
 h1{
   font-weight: bold;
   color: rgb(159, 159, 159);
+  margin-bottom: 3px;
+}
+.portfolio{
+  text-decoration: underline;
+  color: white;
+}
+
+.madeby{
+  font-size: 0.7em;
+  margin: 0;
+  margin-bottom: 20px;
 }
 h2{
   color: white;
@@ -59,6 +70,10 @@ body{
   
   /* margin-top: -72px; */
   
+}
+.idk{
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper{
@@ -401,12 +416,17 @@ span{
   background-color: rgba(129, 129, 129, 0.46);
   border-radius: 50px;
   border: 0;
+  
   padding: 20px;
   margin-top: 20px;
 }
 .single-review{
+  line-height: 25px;
+  
+  padding: 20px;
+  margin: 0;
   font-weight: 100;
-  font-size: 0.7em;
+  font-size: 0.85em;
 }
 .user-info{
   display: flex;
@@ -446,6 +466,38 @@ span{
   transition: all 0.7s;
   /* transform: rotate(90deg); */
 }
+
+.scroll{
+  z-index: 100;
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  border: 0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
+-moz-box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
+box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
+  padding: 5px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+}
+
+.footer{
+  
+  background-color: #313131;
+  padding: 50px;
+  
+}
+
+
+
+
 
 
 /* //////////////////////////////////////////////////////BREAKPOINTS////////////////////////////////////////////////////////////////////// */
@@ -527,6 +579,13 @@ span{
     transform: scale(1.9);
     
   } */
+  .scroll{
+    right: 20px;
+  }
+  .single-review{
+    padding: 0;
+    line-height: 23px;
+  }
   
 }
 

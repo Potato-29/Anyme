@@ -5,12 +5,14 @@ const useFetch = () => {
     const [animeList, setanimeList] = useState([])
     const [topAnime, setTopAnime] = useState([])
     const [search, setSearch] = useState("");
+    // const [footerDown, setFooterDown] = useState(false);
 
 
 
     const searchAnime = async (e) => {
         const url = 'https://api.jikan.moe/v3';
         // const url = 'https://api.jikan.moe/v4/';
+
         e.preventDefault();
         console.log(url)
         FetchAnime(search);

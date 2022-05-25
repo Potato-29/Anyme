@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Collapsible from "react-collapsible";
 import {FaArrowCircleRight} from 'react-icons/fa'
-
+import BackToTop from "../BackToTop";
 
 const AnimePage = () => {
 
@@ -161,11 +161,10 @@ const AnimePage = () => {
                         </div>
                         
                     ))}
-                    
-            
-                    
+
                 </div>
             </div>
+            <BackToTop></BackToTop>
         </div>
     );
 }

@@ -2,12 +2,13 @@ import React from "react";
 import { useState,useEffect } from "react";
 import useFetch from "./useFetch";
 import { Link } from "react-router-dom";
-import AnimePage from "./AnimePage";
+import BackToTop from "../BackToTop";
+import Footer from "./Footer";
 
 const Home = () => {
     
-    // const [votes, setVotes] = useState("");
-    const {animeList, topAnime, search, searchAnime, setSearch, handleId} = useFetch()
+    
+    const {animeList, topAnime, search, searchAnime, setSearch} = useFetch()
   
     
 
@@ -50,6 +51,7 @@ const Home = () => {
                     ))}
                 </div>
             </div>
+            
             <aside>
                 <nav>
                     <h2>Top Anime</h2>
@@ -57,7 +59,7 @@ const Home = () => {
 
                         <Link
                         className="top-anime"
-                        to="/animepage"
+                        to={`/animepage/${anime.mal_id}`}
                         target="_blank"
                         rel="noreferrer"
                         >
@@ -69,7 +71,15 @@ const Home = () => {
                     
                 </nav>
             </aside>
+            
+
+            
+            
+            <BackToTop></BackToTop>
+            
+            
         </div>
+        
         
     );
 }
