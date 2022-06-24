@@ -60,7 +60,7 @@ const Home = () => {
                         <Link
                         className="top-anime"
                         to={`/animepage/${anime.mal_id}`}
-                        target="_blank"
+                        
                         rel="noreferrer"
                         >
                             {anime.title}
