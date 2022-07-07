@@ -32,7 +32,7 @@ const useFetch = () => {
     }, [])
 
     const FetchAnime = async (query) => {
-        const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`)
+        const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=12`)
         .then(res => res.json());
     
         setanimeList(temp.results);

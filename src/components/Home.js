@@ -19,7 +19,7 @@ const Home = () => {
                     <figure>
                         <img src={anime.image_url} className="card-img" alt="AnimeImage" />
                     </figure>
-                    <h3>{anime.title}</h3>
+                    <h3 className="anime-list-name">{anime.title}</h3>
                 </Link>
             </article>
         );
@@ -41,12 +41,12 @@ const Home = () => {
                 </div>
                 <div className="anime-list">
                     {animeList.map(anime => (
-                        
-                        <AnimeCard
-                            anime={anime}
-                            key={anime.mal_id}
-                            
-                        />
+                            <AnimeCard
+                                anime={anime}
+                                key={anime.mal_id}
+                                
+                            />
+
                         
                     ))}
                 </div>
