@@ -56,7 +56,7 @@ const AnimePage = () => {
     ).then((res) => res.json());
 
     console.log(temp);
-    // setReviews(temp.reviews.slice(0, 5));
+    setReviews(temp.data.slice(0, 5));
   };
 
   useEffect((a) => {
@@ -172,15 +172,16 @@ const AnimePage = () => {
           {reviews?.map((revs) => (
             <div className="rev-container">
               <div className="user-info">
-                <img src={revs.reviewer.image_url} className="user-img" />
+                <img
+                  src={revs.user.images.webp.image_url}
+                  className="user-img"
+                />
                 <h3 className="username">
-                  {revs.reviewer.username} <br />{" "}
-                  <span className="score">
-                    Overall Rating: {revs.reviewer.scores.overall}
-                  </span>
+                  {revs.user.username} <br />{" "}
+                  <span className="score">Overall Rating: {revs.score}</span>
                 </h3>
               </div>
-              <p className="single-review">{revs.content}</p>
+              <p className="single-review">{revs.review}</p>
             </div>
           ))}
         </div>

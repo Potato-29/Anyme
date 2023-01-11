@@ -2,7 +2,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 header {
-  font-family:'Montserrat';
+  font-family: "Montserrat";
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -12,34 +12,32 @@ header {
   background-repeat:no-repeat;
   background-attachment: fixed; */
   background: #313131;
-  
 }
 
-h1{
+h1 {
   font-weight: bold;
   color: rgb(159, 159, 159);
   margin-bottom: 3px;
 }
-.portfolio{
+.portfolio {
   text-decoration: underline;
   color: white;
 }
 
-.madeby{
+.madeby {
   font-size: 0.7em;
   margin: 0;
   margin-bottom: 20px;
 }
-h2{
+h2 {
   color: white;
 }
-strong{
-
+strong {
   font-weight: 900;
   color: rgb(215, 48, 82);
 }
 
-p{
+p {
   margin: 20px;
   font-size: 1.5em;
 }
@@ -48,18 +46,17 @@ p{
   display: flex;
 } */
 
-body{
+body {
   color: #ffffff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   margin: 0;
-  background: url('./assets/images/gradient5.png');
+  background: url("./assets/images/gradient5.png");
   background-size: cover;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-
-.layout{
+.layout {
   /* background: url('./assets/images/gradient3.svg'); */
   /* background-image: url('./assets/images/gradient1.png'); */
   background-size: cover;
@@ -67,16 +64,15 @@ body{
   background-repeat: no-repeat;
   display: flex;
   padding: 20px;
-  
+
   /* margin-top: -72px; */
-  
 }
-.idk{
+.idk {
   display: flex;
   flex-direction: column;
 }
 
-.wrapper{
+.wrapper {
   padding-top: 20px;
   height: 100vh;
   flex: 4;
@@ -84,7 +80,6 @@ body{
   justify-content: flex-start;
   align-items: center; */
 }
-
 
 form {
   display: flex;
@@ -99,24 +94,23 @@ form {
   height: 80px;
   padding-left: 20px;
   border-radius: 10px;
-  
+
   /* -webkit-box-shadow: 0px 0px 6px 0px rgba(255,255,255,1);
 -moz-box-shadow: 0px 0px 6px 0px rgba(255,255,255,1);
 box-shadow: 0px 0px 6px 0px rgba(255,255,255,1); */
-  
 }
 
 input {
   all: unset;
   font-size: 20px;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
   width: 90%;
   height: 100%;
   border-radius: 10px;
 }
 
 .search {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   cursor: pointer;
   transition: all 0.3s;
   border: 2px solid rgb(255, 255, 255);
@@ -129,29 +123,28 @@ input {
   border-radius: 10px;
 }
 
-.search:hover{
+.search:hover {
   background-color: #3f423e;
   transition: 0.3s;
 }
 
-
-::placeholder{
+::placeholder {
   color: rgb(237, 237, 237);
   font-size: 20px;
   opacity: 0.7;
 }
 
-aside{
+aside {
   margin-top: 20px;
   margin-right: 20px;
   backdrop-filter: blur(20px);
   flex: 1;
   backdrop-filter: blur(6px) saturate(200%);
-    -webkit-backdrop-filter: blur(6px) saturate(200%);
-    background-color: rgba(129, 129, 129, 0.46);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(129, 129, 129, 0.46);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
   padding: 10px;
   height: 50vh;
   padding-left: 20px;
@@ -161,7 +154,7 @@ aside{
   box-shadow: 0px 0px 13px 1px rgb(68, 66, 66); */
 }
 
-.anime-list{
+.anime-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -171,20 +164,19 @@ aside{
   /* width: 100%; */
   /* overflow-wrap: break-word; */
 }
-.anime-card{
+.anime-card {
   width: 350px;
   display: flex;
   justify-content: center;
 }
 
-
-figure{
+figure {
   display: flex;
   justify-content: center;
-					margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
-.card-img{
+.card-img {
   display: block;
   width: auto;
   height: 100%;
@@ -194,89 +186,83 @@ figure{
   transition: 0.4s;
 }
 
-h3{
+h3 {
   /* justify-content: center; */
   font-weight: 600;
   color: #ffffff;
   font-size: 16px;
   margin-bottom: 16px;
   margin-left: 40px;
-  
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.card-img:hover{
+.card-img:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-							transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .top-anime {
   margin: 5px;
   text-decoration: none;
-  background-color:#e0e0e0;
-	border-radius:35px;
-	border:1px solid #bfbfbf;
-	display:inline-block;
-	cursor:pointer;
-	color:#808080;
-	font-family:"Montserrat";
-	font-size:15px;
-	padding:11px 31px;
-	text-decoration:none;
+  background-color: #e0e0e0;
+  border-radius: 35px;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+  cursor: pointer;
+  color: #808080;
+  font-family: "Montserrat";
+  font-size: 15px;
+  padding: 11px 31px;
+  text-decoration: none;
   transition: background-color 0.5s;
 }
 
-.top-anime:link{
+.top-anime:link {
   color: #808080;
 }
 
-.top-anime:hover{
+.top-anime:hover {
   transition: 0.3s;
-  background-color:#3f423e;
+  background-color: #3f423e;
   color: white;
-} 
-
- .top-anime:active{
-  position:relative;
-	top:1px;
 }
 
-
+.top-anime:active {
+  position: relative;
+  top: 1px;
+}
 
 /* //////////////////////////////////////////////////////SINGLE PAGE STYLES////////////////////////////////////////////////////////////// */
 
-
-
-.main{
+.main {
   padding: 40px;
   /* padding-top: 20px; */
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
   padding: 30px;
 }
-.desc-section{
+.desc-section {
   flex: 3.5;
 }
 
-.desc{
+.desc {
   font-size: 1em;
 }
 
-.anime-name{
+.anime-name {
   color: white;
   padding-left: 20px;
-  
 }
 
-.back-btn{
+.back-btn {
   cursor: pointer;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   color: white;
   padding: 10px;
   margin-left: 30px;
@@ -285,29 +271,28 @@ a{
   border-radius: 5px;
 }
 
-.other-info{
+.other-info {
   padding-top: 10px;
   font-weight: 100;
   font-size: 1.5em;
 }
 
-span{
+span {
   font-size: 18px;
 }
 
-.base-wrapper{
+.base-wrapper {
   flex: 1;
   height: auto;
 }
 
-.anime-img{
+.anime-img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-
 }
 
-.img-wrapper{
+.img-wrapper {
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
   background-color: rgba(129, 129, 129, 0.46);
@@ -325,7 +310,7 @@ span{
   /* padding: 100px; */
 }
 
-.extra-img{
+.extra-img {
   /* padding: 20px; */
   /* margin: 0px; */
   transition: all 0.5s;
@@ -334,7 +319,7 @@ span{
   border-radius: 10px;
 }
 
-.page{
+.page {
   cursor: pointer;
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
@@ -343,45 +328,41 @@ span{
   border: 0;
   padding: 10px;
   margin: 10px;
-  color: white;  
-  font-family: 'Montserrat';
+  color: white;
+  font-family: "Montserrat";
   transition: all 0.5s;
 }
 
-.page:hover{
+.page:hover {
   background-color: #313131;
   transition: 0.5s;
 }
 
-.ep-container{
+.ep-container {
   padding: 2rem 0;
   height: 500px;
   overflow-y: scroll;
   border-radius: 10px;
-  box-shadow: inset 0 0 12px rgba(0,0,0,0.5);
-  -webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
 .ep-container::-webkit-scrollbar {
   width: 1em;
 }
 .ep-container::-webkit-scrollbar-track {
- 
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
 }
 .ep-container::-webkit-scrollbar-thumb {
-  
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
   background-color: rgba(212, 212, 212, 0.46);
   border-radius: 30px;
 }
 
-
-
-.Collapsible__trigger{
+.Collapsible__trigger {
   cursor: pointer;
   margin-top: 40px;
   text-align: center;
@@ -395,98 +376,97 @@ span{
   margin-right: auto;
   padding: 20px;
   color: white;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 20px;
   transition: all 0.5s;
-  
 }
 
-.Collapsible__trigger:hover{
+.Collapsible__trigger:hover {
   background-color: #313131;
   transition: 0.5s;
 }
 
-.eps{
+.eps {
   color: white;
   font-size: 1em;
 }
 
-.loading{
+.loading {
   font-size: 3em;
   text-align: center;
 }
 
-.extra-img:hover{
+.extra-img:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-							transform: scale(1.3);
-              transition: 0.5s;
+  transform: scale(1.3);
+  transition: 0.5s;
 }
 
-.divider{
+.divider {
   margin: 50px;
   display: flex;
   justify-content: center;
 }
 
-.some-pics{
+.some-pics {
   margin-top: 30px;
   color: white;
 }
 
-.reviews{
+.reviews {
   display: flex;
   flex-wrap: wrap;
   margin: 60px 0px 0px 0px;
 }
-.rev-container{
+.rev-container {
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
   background-color: rgba(129, 129, 129, 0.46);
   border-radius: 50px;
   border: 0;
-  
+
   padding: 20px;
   margin-top: 20px;
 }
-.single-review{
+.single-review {
   line-height: 25px;
-  
+
   padding: 20px;
   margin: 0;
   font-weight: 100;
   font-size: 0.85em;
 }
-.user-info{
+.user-info {
   display: flex;
   padding: 20px;
 }
-.username{
+.username {
   margin: 0;
   padding: 10px;
 }
-.score{
+.score {
   font-weight: 100;
   font-size: 0.7em;
 }
-.user-img{
+.user-img {
   border-radius: 20px;
   width: 100px;
   height: 100px;
 }
 
-.get-reviews{
+.get-reviews {
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
   background-color: rgba(129, 129, 129, 0.46);
   border-radius: 50px;
   border: 0;
   padding: 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 1.3em;
   color: white;
 }
 
-.icon{
+.icon {
   background-color: rgba(64, 224, 208, 0);
   color: white;
   margin: 20px;
@@ -495,16 +475,16 @@ span{
   /* transform: rotate(90deg); */
 }
 
-.scroll{
+.scroll {
   z-index: 100;
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
   background-color: rgba(129, 129, 129, 0.46);
   border: 0;
   border-radius: 30px;
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
--moz-box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
-box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(125, 125, 125, 1);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(125, 125, 125, 1);
+  box-shadow: 0px 0px 5px 2px rgba(125, 125, 125, 1);
   padding: 5px;
   color: white;
   text-align: center;
@@ -516,46 +496,37 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
   font-size: 40px;
 }
 
-.footer{
-  
+.footer {
   background-color: #313131;
   padding: 50px;
-  
 }
-
-
-
-
-
 
 /* //////////////////////////////////////////////////////BREAKPOINTS////////////////////////////////////////////////////////////////////// */
 
-
 @media (min-width: 320px) and (max-width: 480px) {
-
-  .anime-list{
+  .anime-list {
     display: flex;
     flex-wrap: wrap;
     /* margin-top: 32px; */
     margin: 32px 0px 0px 10px;
   }
 
-  .layout{
+  .layout {
     display: flex;
     flex-direction: column;
   }
 
-  .search{
+  .search {
     margin-right: 10px;
   }
 
-  aside{
+  aside {
     display: none;
     margin: 20px;
     backdrop-filter: blur(20px);
     padding-top: 20px;
     padding-bottom: 50px;
-    height: 90vh;
+    height: 100%;
     padding-left: 20px;
     border-radius: 10px;
     backdrop-filter: blur(6px) saturate(200%);
@@ -565,26 +536,26 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
     border: 1px solid rgba(255, 255, 255, 0.125);
   }
 
-  .row{
+  .row {
     flex-direction: column;
     padding: 0;
   }
 
-  .back-btn{
+  .back-btn {
     margin: 0;
   }
 
-  .anime-img{
+  .anime-img {
     margin-top: 50px;
     /* padding: 50px 0px 0px 0px; */
     border-radius: 20px;
   }
 
-  .desc{
+  .desc {
     margin: 0;
   }
 
-  .img-wrapper{
+  .img-wrapper {
     padding: 0;
   }
   /* .img-wrapper>*{
@@ -607,25 +578,23 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
     transform: scale(1.9);
     
   } */
-  .scroll{
+  .scroll {
     right: 20px;
   }
-  .single-review{
+  .single-review {
     padding: 0;
     line-height: 23px;
   }
-  
 }
 
-
 @media (min-width: 481px) and (max-width: 782px) {
-  .search{
+  .search {
     margin-right: 10px;
   }
-  .wrapper{
+  .wrapper {
     flex: 2;
   }
-  aside{
+  aside {
     margin: 20px;
     /* margin-right: 20px; */
     flex: 1;
@@ -646,31 +615,31 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
   .top-anime {
     margin: 2px;
     text-decoration: none;
-    background-color:#e0e0e0;
-    border-radius:35px;
-    border:1px solid #bfbfbf;
+    background-color: #e0e0e0;
+    border-radius: 35px;
+    border: 1px solid #bfbfbf;
     display: inline-block;
-    cursor:pointer;
-    color:#808080;
-    font-family:Arial;
-    font-size:12px;
-    padding:5px 15px;
-    text-decoration:none;
+    cursor: pointer;
+    color: #808080;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 5px 15px;
+    text-decoration: none;
     transition: background-color 0.3s;
   }
-  
-  .top-anime:link{
+
+  .top-anime:link {
     color: #808080;
   }
-  
-  .top-anime:hover{
+
+  .top-anime:hover {
     transition: 0.3s;
-    background-color:#3f423e;
-  } 
-  
-   .top-anime:active{
-    position:relative;
-    top:1px;
+    background-color: #3f423e;
+  }
+
+  .top-anime:active {
+    position: relative;
+    top: 1px;
   }
   /* .img-wrapper{
     justify-content: center;
@@ -684,30 +653,27 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
    width: 100%;
    height: 100%;
   } */
-.row{
-  flex-direction: column;
-}
-.anime-img{
-  /* flex: 1; */
-  /* margin-top: 30px;
-  height: 50%; */
-}
-.desc-section{
-  flex: 2;
-}
-
-}
-
-
-@media (min-width:769px) and (max-width: 1024px) {
-
-  .search{
-    margin-right: 10px;
+  .row {
+    flex-direction: column;
   }
-  .wrapper{
+  .anime-img {
+    /* flex: 1; */
+    /* margin-top: 30px;
+  height: 50%; */
+  }
+  .desc-section {
     flex: 2;
   }
-  aside{
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search {
+    margin-right: 10px;
+  }
+  .wrapper {
+    flex: 2;
+  }
+  aside {
     margin-right: 0px;
     flex: 1;
     /* width: 50%; */
@@ -727,47 +693,47 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
   .top-anime {
     margin: 5px;
     text-decoration: none;
-    background-color:#e0e0e0;
-    border-radius:35px;
-    border:1px solid #bfbfbf;
+    background-color: #e0e0e0;
+    border-radius: 35px;
+    border: 1px solid #bfbfbf;
     display: inline-block;
-    cursor:pointer;
-    color:#808080;
-    font-family:Arial;
-    font-size:12px;
-    padding:11px 15px;
-    text-decoration:none;
+    cursor: pointer;
+    color: #808080;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 11px 15px;
+    text-decoration: none;
     transition: background-color 0.3s;
   }
-  
-  .top-anime:link{
+
+  .top-anime:link {
     color: #808080;
   }
-  
-  .top-anime:hover{
+
+  .top-anime:hover {
     transition: 0.3s;
-    background-color:#3f423e;
-  } 
-  
-   .top-anime:active{
-    position:relative;
-    top:1px;
+    background-color: #3f423e;
   }
-      
-  .anime-list{
+
+  .top-anime:active {
+    position: relative;
+    top: 1px;
+  }
+
+  .anime-list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 320px;
     margin: 32px -8px 0px;
   }
 
-  figure{
+  figure {
     display: flex;
     justify-content: center;
-            margin-bottom: 16px;
+    margin-bottom: 16px;
   }
 
-  .card-img{
+  .card-img {
     display: block;
     width: auto;
     height: 350px;
@@ -777,22 +743,22 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
     transition: 0.4s;
   }
 
-  h3{
+  h3 {
     color: #ffffff;
-          font-size: 24px;
-          margin-bottom: 16px;
-          margin-left: 50px;
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-left: 50px;
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 
-  .card-img:hover{
+  .card-img:hover {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-                transform: scale(1.05);
+    transform: scale(1.05);
   }
-/* 
+  /* 
   .extra-img{
     width: 100%;
     height: 100%;
@@ -803,26 +769,24 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
     padding: 0;
    
   } */
-.base-wrapper{
-  width: auto;
-}
-.row{
-  display: flex;
-}
-.anime-img{
-  flex: 2;
-  /* width: 100%; */
-  height: 100%;
-}
-.desc-section{
-  flex: 2;
+  .base-wrapper {
+    width: auto;
+  }
+  .row {
+    display: flex;
+  }
+  .anime-img {
+    flex: 2;
+    /* width: 100%; */
+    height: 100%;
+  }
+  .desc-section {
+    flex: 2;
+  }
 }
 
-}
-
-
-@media (min-width:1025px) and (max-width:1200px) {
-  .card-img{
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .card-img {
     display: block;
     width: 100%;
     height: 350px;
@@ -832,11 +796,11 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
     transition: 0.4s;
   }
 
-  .search{
+  .search {
     margin-right: 10px;
   }
 
-  aside{
+  aside {
     margin-right: 0px;
     flex: 1;
     /* width: 50%; */
@@ -856,59 +820,56 @@ box-shadow: 0px 0px 5px 2px rgba(125,125,125,1);
   .top-anime {
     margin: 5px;
     text-decoration: none;
-    background-color:#e0e0e0;
-    border-radius:35px;
-    border:1px solid #bfbfbf;
+    background-color: #e0e0e0;
+    border-radius: 35px;
+    border: 1px solid #bfbfbf;
     display: inline-block;
-    cursor:pointer;
-    color:#808080;
-    font-family:Arial;
-    font-size:12px;
-    padding:11px 15px;
-    text-decoration:none;
+    cursor: pointer;
+    color: #808080;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 11px 15px;
+    text-decoration: none;
     transition: background-color 0.5s;
   }
-  .img-wrapper{
+  .img-wrapper {
     padding: 20px;
     align-items: center;
   }
-  .base-wrapper{
+  .base-wrapper {
     flex: 2;
   }
-  .anime-img{
+  .anime-img {
     width: 100%;
     height: 100%;
     margin-top: 20px;
   }
 }
 
-@media (min-width:1201px) and (max-width:1440px) {
-  aside{
+@media (min-width: 1201px) and (max-width: 1440px) {
+  aside {
     height: 90vh;
-    margin-right: 0px
+    margin-right: 0px;
   }
 
   /* figure{
     margin: 30px;
   } */
-  .card-img{
+  .card-img {
     width: 80%;
     height: 350px;
   }
-  .base-wrapper{
+  .base-wrapper {
     /* height: 90px; */
   }
-  .desc-section{
-    
+  .desc-section {
   }
-  .desc{
-    
+  .desc {
   }
-  .anime-img{
+  .anime-img {
     margin-top: 20px;
     height: 100%;
   }
-  .row{
-    
+  .row {
   }
 }

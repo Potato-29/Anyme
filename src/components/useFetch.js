@@ -8,7 +8,7 @@ const useFetch = () => {
   // const [footerDown, setFooterDown] = useState(false);
 
   const searchAnime = async (e) => {
-    const url = "https://api.jikan.moe/v4";
+    const url = "https://api.jikan.moe/v4/anime";
     // const url = 'https://api.jikan.moe/v3/';
 
     e.preventDefault();
@@ -17,10 +17,11 @@ const useFetch = () => {
   };
 
   const GetTopAnime = async () => {
-    const temp = await fetch(
-      `https://api.jikan.moe/v3/top/anime/1/bypopularity`
-    ).then((res) => res.json());
-    setTopAnime(temp.top.slice(0, 5));
+    const temp = await fetch(`https://api.jikan.moe/v4/top/anime`).then((res) =>
+      res.json()
+    );
+    console.log("temp", temp);
+    setTopAnime(temp.data.slice(0, 5));
     console.log(temp);
   };
 
